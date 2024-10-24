@@ -849,7 +849,8 @@ public:
 };
 
 
-int main(int argc, char** argv)
+extern "C"
+int __attribute((visibility("default"))) proxy_main(int argc, char** argv)
 {
   // This takes care of initializing libheif and also deinitializing it at the end to free all resources.
   LibHeifInitializer initializer;

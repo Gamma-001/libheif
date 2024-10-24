@@ -19,7 +19,7 @@ install(TARGETS heif-info RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(FILES heif-info.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
 
 
-add_executable(heif-dec ${getopt_sources}
+add_library(heif-dec SHARED ${getopt_sources}
         heif_dec.cc
         common.cc
         common.h)
@@ -36,7 +36,7 @@ else()
 endif()
 
 
-add_executable(heif-enc ${getopt_sources}
+add_library(heif-enc SHARED ${getopt_sources}
         heif_enc.cc
         benchmark.h
         benchmark.cc

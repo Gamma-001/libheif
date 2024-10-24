@@ -33,7 +33,7 @@ if(NOT MSVC)
       add_definitions(-Werror)
   endif ()
 
-  add_definitions(-Wall)
+  #  add_definitions(-Wall)
   add_definitions(-Wsign-compare)
   add_definitions(-Wconversion)
   add_definitions(-Wno-sign-conversion)
